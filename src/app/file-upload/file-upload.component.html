@@ -1,0 +1,14 @@
+<div class="text-center">
+    <input class="form-control" type="file" 
+            (change)="onChange($event)">
+  
+    <button (click)="onUpload()" 
+        class="btn btn-success">
+        Upload
+    </button>
+</div>
+  
+<div *ngIf="error" class="container text-center jumbotron">
+    <h3> File must be in .csv or .pdf format!</h3>
+</div>
+

@@ -1,0 +1,32 @@
+<div class="main">
+  <div class="nav-side-menu">
+    <div class="brand">Statement Analyzer</div>
+    <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+    <div class="menu-list">
+      <ul id="menu-content" class="menu-content collapse out">
+        <li>
+          <a routerLink="/pdf-upload">
+            <i class="fa fa-file-pdf-o"></i> Upload File
+          </a>
+        </li>
+        <li *ngIf="response">
+          <a href="/my-profile">
+            <i class="fa fa-user"></i> My profile
+          </a>
+        </li>
+        <li *ngIf="response" data-toggle="collapse" data-target="#products" class="collapsed">
+          <a><i class="fa fa-bar-chart"></i>Charts <span class="arrow"></span></a>
+        </li>
+        <ul *ngIf="response" class="sub-menu" id="products">
+          <li><a href="/bar-chart">Bars</a></li>
+          <li><a href="/pie-chart">Pies</a></li>
+          <li><a href="/plot">Plots</a></li>
+        </ul>
+      </ul>
+    </div>
+  </div>
+  <div class="сontent">
+    <router-outlet></router-outlet>
+  </div>
+
+</div>
